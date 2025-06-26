@@ -82,6 +82,16 @@ ai-saas/
 
 Deploy easily on [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
+## Development Notes
+
+- All API keys and sensitive data should be stored in the `.env` file and never committed to version control.
+- Prisma is used for database management; run `npx prisma migrate dev` after modifying the schema.
+- Clerk handles authentication and user management; configure it in the Clerk dashboard and update environment variables accordingly.
+- To add new AI tools, create a new route in `app/(dashboard)/(routes)/` and corresponding API endpoints in `app/api/`.
+- Tailwind CSS is used for styling; customize the design in `tailwind.config.ts` and `globals.css`.
+- For production deployment, review environment variables and set up your database and Clerk credentials on the hosting platform.
+- Use TypeScript for type safety and maintainability across the codebase.
+
 ## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs)
